@@ -1,4 +1,5 @@
-packages
+**/packages/*
+
 */**/bin/Debug
 */**/bin/Release
 */**/obj/Debug
