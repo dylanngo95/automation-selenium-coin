@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCoin", "AutoCoin\AutoCoin.csproj", "{CC85DE26-5E41-4515-B422-3FDE709FA172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {00CF71DC-D399-4AE5-B682-08AA9D082891}
+	EndGlobalSection
+EndGlobal
