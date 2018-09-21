@@ -1,4 +1,5 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using AutoCoin.Bitvise;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
@@ -15,14 +16,16 @@ namespace AutoCoin.GoogleSheet
 {
     public class SheetApi
     {
-        static string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
-        static string ApplicationName = "AutoCoin";
-        String spreadsheetId = "16uiq6z_6zlexlllB095iGJ00e6nt5N1LDlfy9ong8WM";
-        String range = "A:D";
+        private string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
+        private readonly string ApplicationName = "AutoCoin";
+        private readonly String spreadsheetId = "16uiq6z_6zlexlllB095iGJ00e6nt5N1LDlfy9ong8WM";
+        private readonly String range = "A:D";
+        private UserCredential credential;
 
-        public void Test() {
+        private AutoBitvise autoBitvise = new AutoBitvise();
 
-            UserCredential credential;
+        public void GetAccountSSH() {
+
             using (var stream =
                 new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
             {
@@ -33,7 +36,8 @@ namespace AutoCoin.GoogleSheet
                     "user",
                     CancellationToken.None,
                     new FileDataStore(credPath, true)).Result;
-                Console.WriteLine("Credential file saved to: " + credPath);
+                
+                //Console.WriteLine("Credential file saved to: " + credPath);
             }
 
 
@@ -58,7 +62,19 @@ namespace AutoCoin.GoogleSheet
                 foreach (var row in values)
                 {
                     // Print columns A and E, which correspond to indices 0 and 4.
-                    Console.WriteLine("{0}, {1}", row[0], row[4]);
+                    Console.WriteLine("{0}, {1}, {2}, {3}", row[0], row[1], row[2], row[3]);
+
+                    String host = row[0].ToString().Trim();
+                    String username = row[1].ToString().Trim();
+                    String password = row[2].ToString().Trim();
+
+                    var isLogin = autoBitvise.LoginSSH(host, username, password);
+                    if (isLogin) {
+                        return;
+                    }
+
+                    Console.WriteLine("Login success");
+                    
                 }
             }
             else

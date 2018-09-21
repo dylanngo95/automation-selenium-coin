@@ -16,7 +16,7 @@ namespace AutoCoin
             //autoBitvise.BindingWithName();
 
             SheetApi sheetApi = new SheetApi();
-            sheetApi.Test();
+            sheetApi.GetAccountSSH();
 
         }
     }
