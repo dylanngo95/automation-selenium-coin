@@ -69,11 +69,14 @@ namespace AutoCoin.GoogleSheet
                     String password = row[2].ToString().Trim();
 
                     var isLogin = autoBitvise.LoginSSH(host, username, password);
-                    if (isLogin) {
+                    if (isLogin)
+                    {
+                        Console.WriteLine("Login success");
                         return;
                     }
-
-                    Console.WriteLine("Login success");
+                    else {
+                        Console.WriteLine("Login fail");
+                    }
                     
                 }
             }
