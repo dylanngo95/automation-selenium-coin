@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoCoin", "AutoCoin\AutoCoin.csproj", "{CC85DE26-5E41-4515-B422-3FDE709FA172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoWeb", "AutoWeb\AutoWeb.csproj", "{16C25D88-E134-4E97-A9B3-B3C6FDF3C215}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSSH", "AutoSSH\AutoSSH.csproj", "{CC85DE26-5E41-4515-B422-3FDE709FA172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoManager", "AutoManager\AutoManager.csproj", "{48A975DF-AB77-4DF8-836F-78EB93770256}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16C25D88-E134-4E97-A9B3-B3C6FDF3C215}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C25D88-E134-4E97-A9B3-B3C6FDF3C215}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C25D88-E134-4E97-A9B3-B3C6FDF3C215}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C25D88-E134-4E97-A9B3-B3C6FDF3C215}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC85DE26-5E41-4515-B422-3FDE709FA172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A975DF-AB77-4DF8-836F-78EB93770256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A975DF-AB77-4DF8-836F-78EB93770256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A975DF-AB77-4DF8-836F-78EB93770256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A975DF-AB77-4DF8-836F-78EB93770256}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
