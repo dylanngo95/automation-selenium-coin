@@ -1,5 +1,4 @@
-﻿using AutoCoin.GoogleApi;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,12 +12,6 @@ namespace AutoSSH
         {
             //AutoBitvise autoBitvise = new AutoBitvise();
             //autoBitvise.BindingWithName();
-
-            SheetApi sheetApi = new SheetApi();
-            sheetApi.GetAccountSSH();
-
-            //HBusRegister hBusRegister = new HBusRegister();
-            //hBusRegister.Register(args);
 
         }
     }

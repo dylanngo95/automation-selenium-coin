@@ -17,17 +17,10 @@ namespace AutoWeb
             Console.WriteLine("Auto Web");
 
             HBusRegister hBusRegister = new HBusRegister();
-            hBusRegister.Register();
-
+            
+            hBusRegister.Register("test123@gmail.com", "test123", "gjundat95@gmail.com");
+            hBusRegister.GetInfoGmail("foiwnahoemono234@gmail.com", "chbk6tl3a25hsg", "vankuanwuomono12@gmail.com");
         }
 
-        public void Test() {
-
-            FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"C:\Users\TinhNgo\coin\gecko\geckodriver-v0.22.0-win64\", "geckodriver.exe");
-            service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
-            IWebDriver driver = new FirefoxDriver(service);
-            driver.Navigate().GoToUrl("https://www.hbus.com/register");
-
-        }
     }
 }

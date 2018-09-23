@@ -57,6 +57,10 @@
       <Project>{16c25d88-e134-4e97-a9b3-b3c6fdf3c215}</Project>
       <Name>AutoWeb</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GoogleApi\GoogleApi.csproj">
+      <Project>{794ffec0-9084-43ed-8599-534819970c10}</Project>
+      <Name>GoogleApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

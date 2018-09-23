@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoSSH", "AutoSSH\AutoSSH.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoManager", "AutoManager\AutoManager.csproj", "{48A975DF-AB77-4DF8-836F-78EB93770256}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "GoogleApi\GoogleApi.csproj", "{794FFEC0-9084-43ED-8599-534819970C10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{48A975DF-AB77-4DF8-836F-78EB93770256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48A975DF-AB77-4DF8-836F-78EB93770256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48A975DF-AB77-4DF8-836F-78EB93770256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{794FFEC0-9084-43ED-8599-534819970C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794FFEC0-9084-43ED-8599-534819970C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794FFEC0-9084-43ED-8599-534819970C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794FFEC0-9084-43ED-8599-534819970C10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

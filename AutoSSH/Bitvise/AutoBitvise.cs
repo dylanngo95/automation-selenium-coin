@@ -68,8 +68,14 @@ namespace AutoCoin.Bitvise
                     driver.FindElementById("2").Click();
                     isLogin = false;
                 }
-                else
+                else {
+                    var requestVertification = driver.FindElementById("102").GetAttribute("Name");
+                    if (requestVertification.Equals("Accept and Save")) {
+                        driver.FindElementById("102").Click();
+                    }
                     isLogin = true;
+                }
+                  
             }
             catch (Exception ex)
             {
@@ -84,6 +90,10 @@ namespace AutoCoin.Bitvise
             }
 
             return isLogin;
+
+        }
+
+        public void Close() {
 
         }
 
