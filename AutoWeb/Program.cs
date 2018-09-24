@@ -18,7 +18,7 @@ namespace AutoWeb
 
             HBusRegister hBusRegister = new HBusRegister();
             
-            hBusRegister.Register("test123@gmail.com", "test123", "gjundat95@gmail.com");
+            //hBusRegister.Register("test123@gmail.com", "test123", "gjundat95@gmail.com");
             hBusRegister.GetInfoGmail("foiwnahoemono234@gmail.com", "chbk6tl3a25hsg", "vankuanwuomono12@gmail.com");
         }
 

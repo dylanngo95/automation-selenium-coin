@@ -67,8 +67,10 @@ namespace AutoWeb.HBus
         }
 
 
-        public void GetInfoGmail(String userName, String password, String recoveryEmail)
+        public bool GetInfoGmail(String userName, String password, String recoveryEmail)
         {
+            bool isLogin = true;
+
             FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(@"GeckoDriver22", "geckodriver.exe");
             service.FirefoxBinaryPath = @"C:\Program Files\Mozilla Firefox\firefox.exe";
             IWebDriver driver = new FirefoxDriver(service);
@@ -78,16 +80,40 @@ namespace AutoWeb.HBus
             driver.FindElement(By.XPath("//input[@id='identifierId']")).SendKeys(userName);
             driver.FindElement(By.XPath("//div[@id='identifierNext']")).Click();
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeAwaitGmail);
-            timeAwaitGmail += 1000;
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(timeAwaitGmail);
             Thread.Sleep(timeSleep);
 
             driver.FindElement(By.XPath("//input[@name='password']")).SendKeys(password);
             driver.FindElement(By.XPath("//div[@id='passwordNext']")).Click();
 
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeAwaitGmail);
+            timeAwaitGmail += 1000;
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(timeAwaitGmail);
             Thread.Sleep(timeSleep);
 
+            var inputRecoveryEmail = driver.FindElement(By.XPath("//div[contains(text(),'Confirm your recovery email')]"));
+            if (inputRecoveryEmail.Displayed)
+            {
+                inputRecoveryEmail.Click();
+                driver.FindElement(By.XPath("//input[@id='knowledge-preregistered-email-response']")).SendKeys(recoveryEmail);
+                driver.FindElement(By.XPath("//div[@id='next']"));
+                // if acount dont login many time
+                // Todo: 
+            }
+            else {
+                var passwordTemp = driver.FindElement(By.XPath("//input[@name='password']"));
+                if (passwordTemp.Displayed) {
+                    isLogin = false;
+                    // Password incorrect
+                }
+            }
+
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromMilliseconds(timeAwaitGmail);
+            Thread.Sleep(timeSleep);
+
+            // Get inbox first
+            var inboxs = driver.FindElement(By.XPath("//table[@id=':35']//tbody"));
+
+            return isLogin;
 
         }
 
